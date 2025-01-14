@@ -16,17 +16,32 @@
       switch-to-workspace-2 = ["<Super>2"];
       switch-to-workspace-3 = ["<Super>3"];
       switch-to-workspace-4 = ["<Super>4"];
+      minimize = [];
       move-to-workspace-1 = ["<Shift><Super>1"];
       move-to-workspace-2 = ["<Shift><Super>2"];
       move-to-workspace-3 = ["<Shift><Super>3"];
       move-to-workspace-4 = ["<Shift><Super>4"];
     };
     "org/gnome/mutter" = {
-      edge-tiling = true;
       dynamic-workspaces = false;
+      edge-tiling = true;
+      toggle-tiled-left = ["<Super>h"];
+      toggle-tiled-right = ["<Super>l"];
+    };
+    "org/gnome/mutter/wayland/keybindings" = {
+      restore-shortcuts = [];
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       help = [];
+      screensaver = ["<Super>Escape"];
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+      ];
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      binding = "<Super>Return";
+      command = "kgx";
+      name = "Open new terminal";
     };
     "org/gnome/desktop/wm/preferences" = {
       num-workspaces = 4;

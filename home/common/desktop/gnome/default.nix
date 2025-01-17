@@ -1,5 +1,11 @@
-{ config,  pkgs, ... }:
+{ config,  pkgs, self, ... }:
+let
+  theme = import "${self}/lib/theme/" { inherit pkgs; };
+in
 {
+  programs.gnome-shell = {
+    enable = true;
+  };
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";

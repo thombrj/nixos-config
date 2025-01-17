@@ -17,6 +17,7 @@
     ./common/base
     ./common/users/${username}
   ]
+  ++ lib.optional (builtins.pathExists (./. + "/${hostname}/extra.nix")) ./${hostname}/extra.nix
   ++ lib.optional (builtins.isString desktop) ./common/desktop;
 
   nixpkgs = {

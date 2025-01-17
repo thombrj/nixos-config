@@ -6,6 +6,7 @@
     git
     jq
     ripgrep
+    stow
     traceroute
     tree
     unzip

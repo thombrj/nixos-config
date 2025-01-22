@@ -25,16 +25,15 @@
 
       libx = import ./lib {
         inherit
-	  self
-	  inputs
-	  outputs
-	  stateVersion
-	  username
-	  ;
+          self
+          inputs
+          outputs
+          stateVersion
+          username
+          ;
       };
 
     in {
-
       homeConfigurations = {
         "${username}@narya" = libx.mkHome {
           hostname = "narya";
@@ -49,7 +48,7 @@
 
       nixosConfigurations = {
         narya = libx.mkHost {
-	  hostname = "narya";
+          hostname = "narya";
           desktop = "i3";
         };
         nenya = libx.mkHost {

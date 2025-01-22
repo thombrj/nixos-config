@@ -8,5 +8,7 @@
     gcc
 
     nodejs
+
+    SDL2
   ];
 }

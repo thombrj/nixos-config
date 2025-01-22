@@ -6,16 +6,10 @@
     extraGroups = 
       [
         "audio"
-	"networkmanager"
-	"users"
+        "networkmanager"
+        "users"
         "wheel"
       ];
     packages = [ pkgs.home-manager ];
   };
-
-#  environment.sessionVaraibles = {
-#    EDITOR = "vim";
-#  };
 }
-
-

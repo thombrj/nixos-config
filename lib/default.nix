@@ -16,7 +16,7 @@ let
       username
       ;
     };
-  in
-  {
-    inherit (helpers) mkHome mkHost forAllSystems;
-  }
+in
+{
+  inherit (helpers) mkHome mkHost forAllSystems;
+}

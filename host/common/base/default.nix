@@ -20,7 +20,11 @@
   
   environment.systemPackages = ( import ./packages.nix { inherit pkgs; }).basePackages;
 
+  fonts.packages = with pkgs; [
+      cascadia-code   
+  ];
+
   programs = {
-    zsh.enable = true;
+      zsh.enable = true;
   };
 }

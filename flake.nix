@@ -9,6 +9,8 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs = 
@@ -22,7 +24,7 @@
       inherit (self) outputs;
       stateVersion = "24.11";
       username = "bryce";
-
+      system = "x86_64-linux";
       libx = import ./lib {
         inherit
           self
@@ -30,6 +32,7 @@
           outputs
           stateVersion
           username
+          system
           ;
       };
 

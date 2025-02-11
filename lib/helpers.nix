@@ -4,6 +4,7 @@
   outputs,
   stateVersion,
   username,
+  system,
   ...
 }:
 {
@@ -24,6 +25,7 @@
         stateVersion
         hostname
         desktop
+        system
         ;
       username = user;
     };

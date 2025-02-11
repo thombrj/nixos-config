@@ -4,6 +4,7 @@
   outputs,
   stateVersion,
   username,
+  system,
   ...
 }:
 let
@@ -14,6 +15,7 @@ let
       outputs
       stateVersion
       username
+      system
       ;
     };
 in

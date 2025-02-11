@@ -1,4 +1,4 @@
-{ pkgs, desktop, ... }:
+{ inputs, pkgs, desktop, system, ... }:
 {
   imports = [
     (./. + "/${desktop}")
@@ -13,6 +13,8 @@
     google-chrome
     discord
     spotify
+    inputs.zen-browser.packages."${system}".default
+    aseprite
   ];
   
   fonts.fontconfig.enable = true;
